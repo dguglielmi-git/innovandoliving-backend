@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "name": "producto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "platform": {
+      "model": "platform"
+    },
+    "price": {
+      "type": "float",
+      "required": true
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "poster": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "summary": {
+      "type": "text",
+      "required": true
+    },
+    "video": {
+      "type": "string",
+      "required": false
+    },
+    "screenshots": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "releaseDate": {
+      "type": "date"
+    },
+    "specs": {
+      "type": "text"
+    },
+    "delivery24": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "ranking": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "publish": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderId": {
+      "type": "uid",
+      "required": true
+    },
+    "addressDelivery": {
+      "type": "json"
+    },
+    "addressInvoice": {
+      "type": "json"
+    },
+    "addressTransport": {
+      "type": "json"
+    },
+    "costDelivery": {
+      "type": "decimal"
+    },
+    "dateCreated": {
+      "type": "datetime"
+    },
+    "deliveryOption": {
+      "type": "string"
+    },
+    "orderCollectorId": {
+      "type": "string"
+    },
+    "orderPreferenceId": {
+      "type": "string"
+    }
+  }
+}

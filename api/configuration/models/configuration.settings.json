@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configurations",
+  "info": {
+    "name": "Configuration",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address_delivery_center": {
+      "type": "string"
+    },
+    "km_price": {
+      "type": "float"
+    },
+    "km_minimum": {
+      "type": "integer"
+    },
+    "facebook_url": {
+      "type": "string"
+    },
+    "instagram_url": {
+      "type": "string"
+    },
+    "twitter_url": {
+      "type": "string"
+    },
+    "whatsapp_num": {
+      "type": "string"
+    },
+    "footer_text": {
+      "type": "string"
+    },
+    "email_url": {
+      "type": "string"
+    }
+  }
+}

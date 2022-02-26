@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Doctype",
+  "info": {
+    "name": "docType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
