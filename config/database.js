@@ -1,3 +1,4 @@
+// Production
 module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
@@ -7,9 +8,9 @@ module.exports = ({ env }) => ({
         host: env('DATABASE_HOST', 'cluster0.m8scl.mongodb.net'),
         srv: env.bool('DATABASE_SRV', true),
         port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'innovandoliving'),
-        username: env('DATABASE_USERNAME', 'admin'),
-        password: env('DATABASE_PASSWORD', 'newTh8izhanlv'),
+        database: env('DATABASE_NAME', 'collectionName'),
+        username: env('DATABASE_USERNAME', 'username'),
+        password: env('DATABASE_PASSWORD', 'password'),
       },
       options: {
         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),

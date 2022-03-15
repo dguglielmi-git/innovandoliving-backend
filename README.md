@@ -8,8 +8,21 @@ This project works as the backend for the E-commerce InnovandoLiving. It was des
 
 This system was deployed on heroku but also it can be deployed on your favorite system (AWS/GCP/Azure/Digital Ocean/etc...).
 
+
 ### Pre-requisites 📋
-You must have configured a AWS S3 Bucket.
+- You must have configured a AWS S3 Bucket.
+
+- Config database connection:
+Go to config/database.js file and provide the credentials for your database
+
+- Config AWS S3 Bucket
+Go to config/plugins.js file and provide the credentials for your AWS S3 Bucket.
+
+- Config JWT Token Key
+(1) Go to config/server.js and assign a value in the second parameter if ADMIN_JWT_SECRET doesn't exist.
+(2) Go to extensions/user-permissions/config/jwt.js and add a second value if JWT_SECRET doesn't exists.
+
+
 
 ## Deploy 📦
 
@@ -26,6 +39,7 @@ AWS_ACCESS_KEY_ID=<Key value obtained from AWS S3 >
 AWS_ACCESS_SECRET=<Key from AWS S3 when we configured our Bucket>
 
 If we follow all the steps described above, we should have our backend online.
+
 
 ## Built with 🛠️
 
@@ -47,6 +61,7 @@ We used [SemVer](http://semver.org/) for versioning. Check out the whole version
 ## License 📄
 
 No license required.
+
 
 ## Thanks 🎁
 
